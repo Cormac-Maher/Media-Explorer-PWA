@@ -1,0 +1,7 @@
+{
+  "name": "media-explorer-project",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
