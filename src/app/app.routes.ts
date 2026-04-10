@@ -10,9 +10,21 @@ export const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full',
   },
+
   {
-    path: 'search',
-    loadComponent: () =>
-      import('./pages/search/search.page').then(m => m.SearchPage),
+    path: 'home',
+    loadComponent: () => import('./home/home.page').then( m => m.HomePage)
+  },
+  {
+    path: 'movies',
+    loadComponent: () => import('./movies/movies.page').then( m => m.MoviesPage)
+  },
+  {
+    path: 'video-games',
+    loadComponent: () => import('./video-games/video-games.page').then( m => m.VideoGamesPage)
+  },
+  {
+    path: 'albums',
+    loadComponent: () => import('./albums/albums.page').then( m => m.AlbumsPage)
   },
 ];
