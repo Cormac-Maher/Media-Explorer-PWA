@@ -10,11 +10,17 @@ import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/stan
   standalone: true,
   imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
 })
-export class MoviesPage implements OnInit {
+export class MoviesPage{
 
-  constructor() { }
+  movies:any[]=[];
+  constructor(private service:MovieService) {}
 
-  ngOnInit() {
-  }
+  ionViewWillEnter(){
+    this.service.GetMovieData().subscribe(         // subscribes to event to get movie info
+      (data)=>{
+        this.movies = data.Search;                 
+        console.log(this.movies);                  
+      }
+    );
 
 }

@@ -5,9 +5,12 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">movies</ion-title>
-    </ion-toolbar>
-  </ion-header>
+ @for(movie of movies;track movie){                
+  <ion-card>
+    <img alt="Poster of Movie" src={{movie.Poster}} width="400" height="400">
+    <ion-card-header>
+      <ion-card-title>{{movie.Title}}</ion-card-title>
+      <ion-card-subtitle>{{movie.Year}}</ion-card-subtitle>
+    </ion-card-header>
+  </ion-card>}
 </ion-content>
