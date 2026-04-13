@@ -1,13 +1,20 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>video-games</ion-title>
+    <ion-title>Video Games</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">video-games</ion-title>
-    </ion-toolbar>
-  </ion-header>
+
+<ion-searchbar [(ngModel)]="query" (ionInput)="search($event)"></ion-searchbar>
+
+  @for(game of videoGames; track game) {
+    <ion-card>
+      <img alt="Cover" src={{game.background_image}} width="400" height="400">
+      <ion-card-header>
+        <ion-card-title>{{ game.name }}</ion-card-title>
+        <ion-card-subtitle>{{ game.released | date:'yyyy' }}</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+  }
 </ion-content>
