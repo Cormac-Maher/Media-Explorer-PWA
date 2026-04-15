@@ -8,7 +8,7 @@
 </ion-header>
 
 <ion-content>
-
+@if(movie){
   <ion-card >
     <img [src]="movie.Poster" />
 
@@ -25,5 +25,5 @@
       <p><strong>Awards:</strong> {{ movie.Awards }}</p>
     </ion-card-content>
   </ion-card>
-
+}
 </ion-content>
