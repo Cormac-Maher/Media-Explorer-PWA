@@ -13,4 +13,12 @@ export class MovieService {
   GetMovieData(query: string): Observable<any> {
     return this.http.get(`${this.apiUrl}&s=${query}`);
   }
+  GetMovieById(id: string): Observable<any> {
+  return this.http.get(`https://www.omdbapi.com/?apikey=2ee2ed84&i=${id}`);
+  
+}
+GetMovieDetails(id: string): Observable<any> {
+  return this.http.get(`${this.apiUrl}&i=${id}`);
+}
+
 }

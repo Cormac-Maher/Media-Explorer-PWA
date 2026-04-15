@@ -10,7 +10,7 @@
 
 
  @for(movie of movies;track movie){                
-  <ion-card>
+  <ion-card (click)="goToDetailsPage(movie.imdbID)">
     <img alt="Poster" src={{movie.Poster}} width="400" height="400">
     <ion-card-header>
       <ion-card-title>{{movie.Title}}</ion-card-title>

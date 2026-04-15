@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 import { IonContent, IonHeader, IonTitle, IonToolbar, IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle,} from '@ionic/angular/standalone';
 import { MovieService } from '../movieServices/movie';
 
@@ -18,7 +19,10 @@ export class MoviesPage{
   query = '';
   movies:any[]=[];
 
-  constructor(private movieService: MovieService) {}
+  constructor(private movieService: MovieService, private router: Router) {}
+
+  goToDetailsPage(id: string) {
+  this.router.navigate(['/movie-detail', id]);}
 
     ionViewWillEnter() {
       this.movieService.GetMovieData('war').subscribe((data) => {

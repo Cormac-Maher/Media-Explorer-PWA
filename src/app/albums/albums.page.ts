@@ -9,7 +9,7 @@ import { AlbumService } from '../albumServices/albums';
   templateUrl: './albums.page.html',
   styleUrls: ['./albums.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, CommonModule, FormsModule]
+  imports: [ IonContent, IonHeader, IonTitle, IonToolbar, IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, CommonModule, FormsModule]
 })
 export class AlbumsPage {
   query = '';
