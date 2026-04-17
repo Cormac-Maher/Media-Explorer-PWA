@@ -9,7 +9,7 @@ import { VideoGameService } from '../videoGameServices/video-game';
   templateUrl: './video-games.page.html',
   styleUrls: ['./video-games.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, CommonModule, FormsModule]
+  imports: [ IonContent, IonHeader, IonTitle, IonToolbar, IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, CommonModule, FormsModule]
 })
 export class VideoGamesPage {
   query = '';

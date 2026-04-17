@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
-import { ChangeDetectorRef } from '@angular/core';
 import { IonContent, IonHeader, IonTitle, IonToolbar, IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent, IonBackButton, IonButtons } from '@ionic/angular/standalone';
 import { MovieService } from '../movieServices/movie';
 
@@ -24,7 +23,10 @@ export class MovieDetailPage {
 
   ionViewWillEnter() {
     const id = this.route.snapshot.paramMap.get('id')!;
-    this.movieService.GetMovieDetails(id).subscribe(data => {
+    console.log(id)
+    this.movieService.GetMovieDetails(id).subscribe(data =>
+       {
+        console.log(data)
       this.movie = data;
     });
   }

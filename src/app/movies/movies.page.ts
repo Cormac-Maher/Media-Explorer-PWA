@@ -13,7 +13,6 @@ import { MovieService } from '../movieServices/movie';
   imports: [ IonContent, IonHeader, IonTitle, IonToolbar, IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, CommonModule, FormsModule]
 })
 
-
 export class MoviesPage{
   
   query = '';
